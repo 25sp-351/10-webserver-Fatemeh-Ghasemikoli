@@ -76,7 +76,7 @@ Output:
 
     Result: 15
 ```
-2.
+3.
 GET /calc/div/15/5 HTTP/1.1 Host: localhost
 Output:
     HTTP/1.1 200 OK
@@ -86,6 +86,7 @@ Output:
 
     Result: 3
 ```
+4.
 GET /sleep/5 HTTP/1.1 Host: localhost
 Output:
     HTTP/1.1 200 OK
@@ -93,9 +94,30 @@ Output:
     Content-Length: 29
     Connection: keep-alive
 
-    Done sleeping for 5 seconds.   
----
+    Done sleeping for 5 seconds.
+```
+5. 
+GET /static/hello.txt HTTP/1.1 Host: localhost
+Output:
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Content-Length: 26
+    Connection: keep-alive
 
+    This is Assignment 10! :)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6.
+GET /static/hello.txt HTTP/1.0 Host: localhost
+
+Connection closed by foreign host.
+    in server side:
+---- Received Request ----
+HTTP/1.1 200 OKContent-Type: text/plainContent-Length: 26Connection: keep-aliveThis is Assignment 10
+GET /static/hello.txt HTTP/1.0 Host: localhost
+
+
+Invalid request (-2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ## Testing in Browser
 ```
 http://localhost:8080/calc/mul/3/7
