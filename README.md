@@ -65,7 +65,6 @@ Output:
 
     Result: 9
 
-```
 2.
 GET /calc/mul/3/5 HTTP/1.1 Host: localhost
 Output:
@@ -75,7 +74,7 @@ Output:
     Connection: keep-alive
 
     Result: 15
-```
+
 3.
 GET /calc/div/15/5 HTTP/1.1 Host: localhost
 Output:
@@ -85,7 +84,7 @@ Output:
     Connection: keep-alive
 
     Result: 3
-```
+
 4.
 GET /sleep/5 HTTP/1.1 Host: localhost
 Output:
@@ -95,7 +94,7 @@ Output:
     Connection: keep-alive
 
     Done sleeping for 5 seconds.
-```
+
 5. 
 GET /static/hello.txt HTTP/1.1 Host: localhost
 Output:
